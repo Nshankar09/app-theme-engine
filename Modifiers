@@ -1,0 +1,51 @@
+// Context and optional Config key as parameters to config()
+ATE.config(this, null) 
+    // 0 to disable, sets a default theme for all Activities which use this config key
+    .activityTheme(R.style.my_theme)
+    // true by default, colors support action bars and toolbars
+    .coloredActionBar(true)
+    // defaults to colorPrimary attribute value
+    .primaryColor(color)
+    // when true, primaryColorDark is auto generated from primaryColor
+    .autoGeneratePrimaryDark(true) 
+    // defaults to colorPrimaryDark attribute value
+    .primaryColorDark(color)
+    // defaults to colorAccent attribute value
+    .accentColor(color)
+    // by default, is equal to primaryColorDark's value
+    .statusBarColor(color)
+    // true by default, setting to false disables coloring even if statusBarColor is set
+    .coloredStatusBar(true)
+    // dark status bar icons on Marshmallow (API 23)+, auto uses light status bar mode when primaryColor is light
+    .lightStatusBarMode(Config.LIGHT_STATUS_BAR_AUTO)
+    // sets a color for all toolbars, defaults to primaryColor() value.
+    // this also gets correctly applied to CollapsingToolbarLayouts.
+    .toolbarColor(color)
+    // when on, makes the toolbar navigation icon, title, and menu icons black  
+    lightToolbarMode(Config.LIGHT_TOOLBAR_AUTO)
+    // by default, is equal to primaryColor unless coloredNavigationBar is false
+    .navigationBarColor(color)
+    // false by default, setting to false disables coloring even if navigationBarColor is set
+    .coloredNavigationBar(false)
+    // defaults to ?android:textColorPrimary attribute value
+    .textColorPrimary(color)
+    // defaults to ?android:textColorPrimaryInverse attribute value
+    .textColorPrimaryInverse(color)
+    // defaults to ?android:textColorSecondary attribute value
+    .textColorSecondary(color)
+    // defaults to ?android:textColorSecondaryInverse attribute value
+    .textColorSecondaryInverse(color)
+    // true by default, setting to false disables the automatic use of the next 4 modifiers.
+    .navigationViewThemed(true) 
+    // Color of selected NavigationView item icon. Defaults to your accent color.
+    .navigationViewSelectedIcon(color)
+    // Color of selected NavigationView item text. Defaults to your accent color.
+    .navigationViewSelectedText(color)
+    // Color of non-selected NavigationView item icon. Defaults to Material Design guideline color.
+    .navigationViewNormalIcon(color)
+    // Color of non-selected NavigationView item text. Defaults to Material Design guideline color.
+    .navigationViewNormalText(color)
+    // Background of selected NavigationView item. Defaults to Material Design guideline color.
+    .navigationViewSelectedBg(color)
+    // application target as parameter, accepts different parameter types/counts
+    .apply(this);
